@@ -1,0 +1,763 @@
+> log file: ./log/laptop-to-device/[SemBridge]-210519-093502.log
+cuda memory allocated: 10108928
+n_trainable_params: 1431975, n_nontrainable_params: 1094700
+> training arguments:
+>>> source: laptop
+>>> target: device
+>>> use_unlabel: 1
+>>> use_syntactic: 0
+>>> use_semantic: 1
+>>> split: 3
+>>> local_bert_path: F:\NLP\BERT-BASE-UNCASED
+>>> model_name: DECNN
+>>> batch_size: 8
+>>> learning_rate: 0.0001
+>>> lr_decay: 1e-05
+>>> num_epoch: 100
+>>> emb_dim: 100
+>>> dep_dim: 50
+>>> pos_dim: 50
+>>> hidden_dim: 256
+>>> keep_prob: 0.5
+>>> l2_reg: 1e-05
+>>> beta: 0.1
+>>> kernel_size: 5
+>>> hop_num: 2
+>>> class_num: 3
+>>> cluster_num: 200
+>>> cate_num: 20
+>>> seed: 123
+>>> log_step: 5
+>>> dynamic_gate: 1
+>>> valset_num: 0
+>>> reuse_embedding: 1
+>>> optimizer: <class 'torch.optim.adam.Adam'>
+>>> initializer: <function uniform_ at 0x7f77d57c3c80>
+>>> device: cuda:0
+>>> ablation: None
+>>> topk: 10
+>>> name: [SemBridge]
+>>> dataset_file: {'train': './data/laptop/train3/', 'unlabel': './data/device/train3/', 'test': './data/device/test3/'}
+>>> model_class: <class 'models.decnn_base.DECNN'>
+>>> inputs_cols: ['sentence', 'mask', 'position', 'keep_prob']
+>>> max_sentence_len: 110
+
+-------------------------------------Iter0--------------------------------------
+Train: final loss=0.821117, aspect loss=0.126486, opinion loss=0.000000, domain loss=0.694783, sentiment loss=0.000000, reg loss=0.000000, step=1442
+Dev:   final loss=0.255530, aspect loss=0.255530, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=1442
+Dev:   aspect f1=0.2881, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.2881, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 0 Current Min Loss Index : 0 Epoch Time: 0m 12s Tau : 1.00
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.2881.pth
+
+-------------------------------------Iter1--------------------------------------
+Train: final loss=0.780921, aspect loss=0.087169, opinion loss=0.000000, domain loss=0.693735, sentiment loss=0.000000, reg loss=0.000000, step=2884
+Dev:   final loss=0.194247, aspect loss=0.194247, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=2884
+Dev:   aspect f1=0.3618, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.3618, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 1 Current Min Loss Index : 1 Epoch Time: 0m 12s Tau : 0.97
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.3618.pth
+
+-------------------------------------Iter2--------------------------------------
+Train: final loss=0.766139, aspect loss=0.076225, opinion loss=0.000000, domain loss=0.690667, sentiment loss=0.000000, reg loss=0.000000, step=4326
+Dev:   final loss=0.193138, aspect loss=0.193138, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=4326
+Dev:   aspect f1=0.3833, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.3833, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 2 Current Min Loss Index : 2 Epoch Time: 0m 12s Tau : 0.94
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.3833.pth
+
+-------------------------------------Iter3--------------------------------------
+Train: final loss=0.759212, aspect loss=0.069618, opinion loss=0.000000, domain loss=0.689691, sentiment loss=0.000000, reg loss=0.000000, step=5768
+Dev:   final loss=0.221789, aspect loss=0.221789, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=5768
+Dev:   aspect f1=0.3811, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.3811, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 2 Current Min Loss Index : 2 Epoch Time: 0m 11s Tau : 0.91
+
+-------------------------------------Iter4--------------------------------------
+Train: final loss=0.757781, aspect loss=0.066196, opinion loss=0.000000, domain loss=0.691710, sentiment loss=0.000000, reg loss=0.000000, step=7210
+Dev:   final loss=0.213205, aspect loss=0.213205, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=7210
+Dev:   aspect f1=0.4070, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4070, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 4 Current Min Loss Index : 2 Epoch Time: 0m 11s Tau : 0.89
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4070.pth
+
+-------------------------------------Iter5--------------------------------------
+Train: final loss=0.753799, aspect loss=0.062319, opinion loss=0.000000, domain loss=0.691856, sentiment loss=0.000000, reg loss=0.000000, step=8652
+Dev:   final loss=0.185307, aspect loss=0.185307, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=8652
+Dev:   aspect f1=0.4138, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4138, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 5 Current Min Loss Index : 5 Epoch Time: 0m 11s Tau : 0.86
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4138.pth
+
+-------------------------------------Iter6--------------------------------------
+Train: final loss=0.751177, aspect loss=0.058988, opinion loss=0.000000, domain loss=0.692155, sentiment loss=0.000000, reg loss=0.000000, step=10094
+Dev:   final loss=0.180935, aspect loss=0.180935, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=10094
+Dev:   aspect f1=0.4315, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4315, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 6 Current Min Loss Index : 6 Epoch Time: 0m 11s Tau : 0.84
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4315.pth
+
+-------------------------------------Iter7--------------------------------------
+Train: final loss=0.747872, aspect loss=0.057202, opinion loss=0.000000, domain loss=0.691173, sentiment loss=0.000000, reg loss=0.000000, step=11536
+Dev:   final loss=0.196534, aspect loss=0.196534, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=11536
+Dev:   aspect f1=0.4297, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4297, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 6 Current Min Loss Index : 6 Epoch Time: 0m 11s Tau : 0.81
+
+-------------------------------------Iter8--------------------------------------
+Train: final loss=0.745525, aspect loss=0.053895, opinion loss=0.000000, domain loss=0.692091, sentiment loss=0.000000, reg loss=0.000000, step=12978
+Dev:   final loss=0.187784, aspect loss=0.187784, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=12978
+Dev:   aspect f1=0.4350, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4350, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 8 Current Min Loss Index : 6 Epoch Time: 0m 11s Tau : 0.79
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4350.pth
+
+-------------------------------------Iter9--------------------------------------
+Train: final loss=0.744888, aspect loss=0.053093, opinion loss=0.000000, domain loss=0.692151, sentiment loss=0.000000, reg loss=0.000000, step=14420
+Dev:   final loss=0.185829, aspect loss=0.185829, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=14420
+Dev:   aspect f1=0.4415, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4415, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 9 Current Min Loss Index : 6 Epoch Time: 0m 11s Tau : 0.76
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4415.pth
+
+-------------------------------------Iter10-------------------------------------
+Train: final loss=0.743768, aspect loss=0.051205, opinion loss=0.000000, domain loss=0.692667, sentiment loss=0.000000, reg loss=0.000000, step=15862
+Dev:   final loss=0.179539, aspect loss=0.179539, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=15862
+Dev:   aspect f1=0.4479, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4479, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 10 Current Min Loss Index : 10 Epoch Time: 0m 10s Tau : 0.74
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4479.pth
+
+-------------------------------------Iter11-------------------------------------
+Train: final loss=0.742298, aspect loss=0.049415, opinion loss=0.000000, domain loss=0.692947, sentiment loss=0.000000, reg loss=0.000000, step=17304
+Dev:   final loss=0.210344, aspect loss=0.210344, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=17304
+Dev:   aspect f1=0.4215, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4215, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 10 Current Min Loss Index : 10 Epoch Time: 0m 10s Tau : 0.72
+
+-------------------------------------Iter12-------------------------------------
+Train: final loss=0.740283, aspect loss=0.048710, opinion loss=0.000000, domain loss=0.691880, sentiment loss=0.000000, reg loss=0.000000, step=18746
+Dev:   final loss=0.176207, aspect loss=0.176207, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=18746
+Dev:   aspect f1=0.4382, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4382, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 10 Current Min Loss Index : 12 Epoch Time: 0m 11s Tau : 0.70
+
+-------------------------------------Iter13-------------------------------------
+Train: final loss=0.739679, aspect loss=0.046971, opinion loss=0.000000, domain loss=0.692755, sentiment loss=0.000000, reg loss=0.000000, step=20188
+Dev:   final loss=0.178799, aspect loss=0.178799, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=20188
+Dev:   aspect f1=0.4483, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4483, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 13 Current Min Loss Index : 12 Epoch Time: 0m 11s Tau : 0.68
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4483.pth
+
+-------------------------------------Iter14-------------------------------------
+Train: final loss=0.739119, aspect loss=0.046097, opinion loss=0.000000, domain loss=0.693167, sentiment loss=0.000000, reg loss=0.000000, step=21630
+Dev:   final loss=0.181478, aspect loss=0.181478, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=21630
+Dev:   aspect f1=0.4429, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4429, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 13 Current Min Loss Index : 12 Epoch Time: 0m 12s Tau : 0.66
+
+-------------------------------------Iter15-------------------------------------
+Train: final loss=0.738284, aspect loss=0.045305, opinion loss=0.000000, domain loss=0.692842, sentiment loss=0.000000, reg loss=0.000000, step=23072
+Dev:   final loss=0.196072, aspect loss=0.196072, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=23072
+Dev:   aspect f1=0.4338, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4338, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 13 Current Min Loss Index : 12 Epoch Time: 0m 11s Tau : 0.64
+
+-------------------------------------Iter16-------------------------------------
+Train: final loss=0.737560, aspect loss=0.044264, opinion loss=0.000000, domain loss=0.693340, sentiment loss=0.000000, reg loss=0.000000, step=24514
+Dev:   final loss=0.210382, aspect loss=0.210382, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=24514
+Dev:   aspect f1=0.4324, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4324, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 13 Current Min Loss Index : 12 Epoch Time: 0m 12s Tau : 0.62
+
+-------------------------------------Iter17-------------------------------------
+Train: final loss=0.736034, aspect loss=0.042198, opinion loss=0.000000, domain loss=0.693775, sentiment loss=0.000000, reg loss=0.000000, step=25956
+Dev:   final loss=0.214152, aspect loss=0.214152, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=25956
+Dev:   aspect f1=0.4333, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4333, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 13 Current Min Loss Index : 12 Epoch Time: 0m 12s Tau : 0.60
+
+-------------------------------------Iter18-------------------------------------
+Train: final loss=0.734309, aspect loss=0.041597, opinion loss=0.000000, domain loss=0.692687, sentiment loss=0.000000, reg loss=0.000000, step=27398
+Dev:   final loss=0.216287, aspect loss=0.216287, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=27398
+Dev:   aspect f1=0.4402, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4402, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 13 Current Min Loss Index : 12 Epoch Time: 0m 11s Tau : 0.58
+
+-------------------------------------Iter19-------------------------------------
+Train: final loss=0.732421, aspect loss=0.039833, opinion loss=0.000000, domain loss=0.692631, sentiment loss=0.000000, reg loss=0.000000, step=28840
+Dev:   final loss=0.178864, aspect loss=0.178864, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=28840
+Dev:   aspect f1=0.4502, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4502, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 19 Current Min Loss Index : 12 Epoch Time: 0m 12s Tau : 0.57
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4502.pth
+
+-------------------------------------Iter20-------------------------------------
+Train: final loss=0.732354, aspect loss=0.039389, opinion loss=0.000000, domain loss=0.692724, sentiment loss=0.000000, reg loss=0.000000, step=30282
+Dev:   final loss=0.185028, aspect loss=0.185028, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=30282
+Dev:   aspect f1=0.4449, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4449, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 19 Current Min Loss Index : 12 Epoch Time: 0m 12s Tau : 0.55
+
+-------------------------------------Iter21-------------------------------------
+Train: final loss=0.732246, aspect loss=0.038856, opinion loss=0.000000, domain loss=0.693472, sentiment loss=0.000000, reg loss=0.000000, step=31724
+Dev:   final loss=0.197448, aspect loss=0.197448, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=31724
+Dev:   aspect f1=0.4414, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4414, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 19 Current Min Loss Index : 12 Epoch Time: 0m 12s Tau : 0.53
+
+-------------------------------------Iter22-------------------------------------
+Train: final loss=0.731626, aspect loss=0.037590, opinion loss=0.000000, domain loss=0.693812, sentiment loss=0.000000, reg loss=0.000000, step=33166
+Dev:   final loss=0.198973, aspect loss=0.198973, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=33166
+Dev:   aspect f1=0.4459, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4459, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 19 Current Min Loss Index : 12 Epoch Time: 0m 12s Tau : 0.52
+
+-------------------------------------Iter23-------------------------------------
+Train: final loss=0.730465, aspect loss=0.037100, opinion loss=0.000000, domain loss=0.693336, sentiment loss=0.000000, reg loss=0.000000, step=34608
+Dev:   final loss=0.176000, aspect loss=0.176000, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=34608
+Dev:   aspect f1=0.4486, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4486, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 19 Current Min Loss Index : 23 Epoch Time: 0m 12s Tau : 0.50
+
+-------------------------------------Iter24-------------------------------------
+Train: final loss=0.730767, aspect loss=0.037137, opinion loss=0.000000, domain loss=0.693355, sentiment loss=0.000000, reg loss=0.000000, step=36050
+Dev:   final loss=0.199031, aspect loss=0.199031, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=36050
+Dev:   aspect f1=0.4467, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4467, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 19 Current Min Loss Index : 23 Epoch Time: 0m 12s Tau : 0.49
+
+-------------------------------------Iter25-------------------------------------
+Train: final loss=0.729640, aspect loss=0.035801, opinion loss=0.000000, domain loss=0.693886, sentiment loss=0.000000, reg loss=0.000000, step=37492
+Dev:   final loss=0.174844, aspect loss=0.174844, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=37492
+Dev:   aspect f1=0.4602, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4602, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 25 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.47
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4602.pth
+
+-------------------------------------Iter26-------------------------------------
+Train: final loss=0.727478, aspect loss=0.034267, opinion loss=0.000000, domain loss=0.693166, sentiment loss=0.000000, reg loss=0.000000, step=38934
+Dev:   final loss=0.210453, aspect loss=0.210453, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=38934
+Dev:   aspect f1=0.4335, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4335, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 25 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.46
+
+-------------------------------------Iter27-------------------------------------
+Train: final loss=0.726943, aspect loss=0.034083, opinion loss=0.000000, domain loss=0.692917, sentiment loss=0.000000, reg loss=0.000000, step=40376
+Dev:   final loss=0.229849, aspect loss=0.229849, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=40376
+Dev:   aspect f1=0.4329, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4329, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 25 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.44
+
+-------------------------------------Iter28-------------------------------------
+Train: final loss=0.727311, aspect loss=0.033655, opinion loss=0.000000, domain loss=0.693720, sentiment loss=0.000000, reg loss=0.000000, step=41818
+Dev:   final loss=0.216269, aspect loss=0.216269, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=41818
+Dev:   aspect f1=0.4419, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4419, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 25 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.43
+
+-------------------------------------Iter29-------------------------------------
+Train: final loss=0.725925, aspect loss=0.032408, opinion loss=0.000000, domain loss=0.693428, sentiment loss=0.000000, reg loss=0.000000, step=43260
+Dev:   final loss=0.251427, aspect loss=0.251427, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=43260
+Dev:   aspect f1=0.4209, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4209, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 25 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.42
+
+-------------------------------------Iter30-------------------------------------
+Train: final loss=0.726086, aspect loss=0.032637, opinion loss=0.000000, domain loss=0.693472, sentiment loss=0.000000, reg loss=0.000000, step=44702
+Dev:   final loss=0.196177, aspect loss=0.196177, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=44702
+Dev:   aspect f1=0.4628, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4628, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.41
+>> Checkpoint Saved: state_dict/laptop-to-device/[SemBridge]-ATE-F1-0.4628.pth
+
+-------------------------------------Iter31-------------------------------------
+Train: final loss=0.724454, aspect loss=0.031071, opinion loss=0.000000, domain loss=0.693467, sentiment loss=0.000000, reg loss=0.000000, step=46144
+Dev:   final loss=0.222756, aspect loss=0.222756, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=46144
+Dev:   aspect f1=0.4372, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4372, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.39
+
+-------------------------------------Iter32-------------------------------------
+Train: final loss=0.724384, aspect loss=0.031300, opinion loss=0.000000, domain loss=0.693081, sentiment loss=0.000000, reg loss=0.000000, step=47586
+Dev:   final loss=0.238159, aspect loss=0.238159, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=47586
+Dev:   aspect f1=0.4337, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4337, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.38
+
+-------------------------------------Iter33-------------------------------------
+Train: final loss=0.724515, aspect loss=0.030922, opinion loss=0.000000, domain loss=0.693635, sentiment loss=0.000000, reg loss=0.000000, step=49028
+Dev:   final loss=0.221712, aspect loss=0.221712, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=49028
+Dev:   aspect f1=0.4342, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4342, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.37
+
+-------------------------------------Iter34-------------------------------------
+Train: final loss=0.723899, aspect loss=0.030164, opinion loss=0.000000, domain loss=0.693631, sentiment loss=0.000000, reg loss=0.000000, step=50470
+Dev:   final loss=0.201234, aspect loss=0.201234, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=50470
+Dev:   aspect f1=0.4402, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4402, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.36
+
+-------------------------------------Iter35-------------------------------------
+Train: final loss=0.722494, aspect loss=0.028773, opinion loss=0.000000, domain loss=0.693752, sentiment loss=0.000000, reg loss=0.000000, step=51912
+Dev:   final loss=0.208746, aspect loss=0.208746, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=51912
+Dev:   aspect f1=0.4479, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4479, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.35
+
+-------------------------------------Iter36-------------------------------------
+Train: final loss=0.721815, aspect loss=0.028502, opinion loss=0.000000, domain loss=0.693368, sentiment loss=0.000000, reg loss=0.000000, step=53354
+Dev:   final loss=0.218024, aspect loss=0.218024, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=53354
+Dev:   aspect f1=0.4413, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4413, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.34
+
+-------------------------------------Iter37-------------------------------------
+Train: final loss=0.721325, aspect loss=0.028193, opinion loss=0.000000, domain loss=0.693079, sentiment loss=0.000000, reg loss=0.000000, step=54796
+Dev:   final loss=0.219811, aspect loss=0.219811, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=54796
+Dev:   aspect f1=0.4474, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4474, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.33
+
+-------------------------------------Iter38-------------------------------------
+Train: final loss=0.722039, aspect loss=0.028384, opinion loss=0.000000, domain loss=0.693418, sentiment loss=0.000000, reg loss=0.000000, step=56238
+Dev:   final loss=0.232063, aspect loss=0.232063, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=56238
+Dev:   aspect f1=0.4375, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4375, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.32
+
+-------------------------------------Iter39-------------------------------------
+Train: final loss=0.720969, aspect loss=0.027453, opinion loss=0.000000, domain loss=0.693426, sentiment loss=0.000000, reg loss=0.000000, step=57680
+Dev:   final loss=0.241156, aspect loss=0.241156, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=57680
+Dev:   aspect f1=0.4302, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4302, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.31
+
+-------------------------------------Iter40-------------------------------------
+Train: final loss=0.720646, aspect loss=0.027150, opinion loss=0.000000, domain loss=0.693500, sentiment loss=0.000000, reg loss=0.000000, step=59122
+Dev:   final loss=0.226967, aspect loss=0.226967, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=59122
+Dev:   aspect f1=0.4392, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4392, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.30
+
+-------------------------------------Iter41-------------------------------------
+Train: final loss=0.719597, aspect loss=0.026555, opinion loss=0.000000, domain loss=0.693064, sentiment loss=0.000000, reg loss=0.000000, step=60564
+Dev:   final loss=0.263344, aspect loss=0.263344, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=60564
+Dev:   aspect f1=0.4309, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4309, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.29
+
+-------------------------------------Iter42-------------------------------------
+Train: final loss=0.719893, aspect loss=0.026305, opinion loss=0.000000, domain loss=0.693692, sentiment loss=0.000000, reg loss=0.000000, step=62006
+Dev:   final loss=0.261725, aspect loss=0.261725, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=62006
+Dev:   aspect f1=0.4425, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4425, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.28
+
+-------------------------------------Iter43-------------------------------------
+Train: final loss=0.719850, aspect loss=0.026804, opinion loss=0.000000, domain loss=0.692986, sentiment loss=0.000000, reg loss=0.000000, step=63448
+Dev:   final loss=0.240259, aspect loss=0.240259, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=63448
+Dev:   aspect f1=0.4538, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4538, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.28
+
+-------------------------------------Iter44-------------------------------------
+Train: final loss=0.719977, aspect loss=0.026596, opinion loss=0.000000, domain loss=0.693392, sentiment loss=0.000000, reg loss=0.000000, step=64890
+Dev:   final loss=0.231416, aspect loss=0.231416, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=64890
+Dev:   aspect f1=0.4464, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4464, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.27
+
+-------------------------------------Iter45-------------------------------------
+Train: final loss=0.719081, aspect loss=0.025209, opinion loss=0.000000, domain loss=0.693860, sentiment loss=0.000000, reg loss=0.000000, step=66332
+Dev:   final loss=0.225129, aspect loss=0.225129, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=66332
+Dev:   aspect f1=0.4474, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4474, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.26
+
+-------------------------------------Iter46-------------------------------------
+Train: final loss=0.717810, aspect loss=0.024921, opinion loss=0.000000, domain loss=0.692748, sentiment loss=0.000000, reg loss=0.000000, step=67774
+Dev:   final loss=0.243585, aspect loss=0.243585, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=67774
+Dev:   aspect f1=0.4483, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4483, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.25
+
+-------------------------------------Iter47-------------------------------------
+Train: final loss=0.717745, aspect loss=0.024088, opinion loss=0.000000, domain loss=0.693565, sentiment loss=0.000000, reg loss=0.000000, step=69216
+Dev:   final loss=0.228969, aspect loss=0.228969, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=69216
+Dev:   aspect f1=0.4503, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4503, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.24
+
+-------------------------------------Iter48-------------------------------------
+Train: final loss=0.718436, aspect loss=0.024871, opinion loss=0.000000, domain loss=0.693523, sentiment loss=0.000000, reg loss=0.000000, step=70658
+Dev:   final loss=0.227662, aspect loss=0.227662, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=70658
+Dev:   aspect f1=0.4383, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4383, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.24
+
+-------------------------------------Iter49-------------------------------------
+Train: final loss=0.715800, aspect loss=0.023009, opinion loss=0.000000, domain loss=0.692733, sentiment loss=0.000000, reg loss=0.000000, step=72100
+Dev:   final loss=0.252695, aspect loss=0.252695, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=72100
+Dev:   aspect f1=0.4459, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4459, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.23
+
+-------------------------------------Iter50-------------------------------------
+Train: final loss=0.717838, aspect loss=0.023857, opinion loss=0.000000, domain loss=0.693714, sentiment loss=0.000000, reg loss=0.000000, step=73542
+Dev:   final loss=0.251283, aspect loss=0.251283, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=73542
+Dev:   aspect f1=0.4424, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4424, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.22
+
+-------------------------------------Iter51-------------------------------------
+Train: final loss=0.716940, aspect loss=0.023551, opinion loss=0.000000, domain loss=0.693491, sentiment loss=0.000000, reg loss=0.000000, step=74984
+Dev:   final loss=0.268208, aspect loss=0.268208, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=74984
+Dev:   aspect f1=0.4401, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4401, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.22
+
+-------------------------------------Iter52-------------------------------------
+Train: final loss=0.717280, aspect loss=0.023336, opinion loss=0.000000, domain loss=0.693932, sentiment loss=0.000000, reg loss=0.000000, step=76426
+Dev:   final loss=0.263677, aspect loss=0.263677, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=76426
+Dev:   aspect f1=0.4323, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4323, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.21
+
+-------------------------------------Iter53-------------------------------------
+Train: final loss=0.715979, aspect loss=0.022438, opinion loss=0.000000, domain loss=0.693489, sentiment loss=0.000000, reg loss=0.000000, step=77868
+Dev:   final loss=0.258193, aspect loss=0.258193, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=77868
+Dev:   aspect f1=0.4300, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4300, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.20
+
+-------------------------------------Iter54-------------------------------------
+Train: final loss=0.715216, aspect loss=0.021861, opinion loss=0.000000, domain loss=0.693439, sentiment loss=0.000000, reg loss=0.000000, step=79310
+Dev:   final loss=0.252246, aspect loss=0.252246, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=79310
+Dev:   aspect f1=0.4463, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4463, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.20
+
+-------------------------------------Iter55-------------------------------------
+Train: final loss=0.715365, aspect loss=0.022091, opinion loss=0.000000, domain loss=0.693361, sentiment loss=0.000000, reg loss=0.000000, step=80752
+Dev:   final loss=0.269845, aspect loss=0.269845, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=80752
+Dev:   aspect f1=0.4435, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4435, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.19
+
+-------------------------------------Iter56-------------------------------------
+Train: final loss=0.714759, aspect loss=0.021500, opinion loss=0.000000, domain loss=0.693283, sentiment loss=0.000000, reg loss=0.000000, step=82194
+Dev:   final loss=0.268312, aspect loss=0.268312, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=82194
+Dev:   aspect f1=0.4444, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4444, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.19
+
+-------------------------------------Iter57-------------------------------------
+Train: final loss=0.714208, aspect loss=0.021485, opinion loss=0.000000, domain loss=0.692584, sentiment loss=0.000000, reg loss=0.000000, step=83636
+Dev:   final loss=0.256505, aspect loss=0.256505, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=83636
+Dev:   aspect f1=0.4369, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4369, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.18
+
+-------------------------------------Iter58-------------------------------------
+Train: final loss=0.715003, aspect loss=0.021539, opinion loss=0.000000, domain loss=0.693285, sentiment loss=0.000000, reg loss=0.000000, step=85078
+Dev:   final loss=0.264823, aspect loss=0.264823, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=85078
+Dev:   aspect f1=0.4485, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4485, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.18
+
+-------------------------------------Iter59-------------------------------------
+Train: final loss=0.714422, aspect loss=0.020858, opinion loss=0.000000, domain loss=0.693430, sentiment loss=0.000000, reg loss=0.000000, step=86520
+Dev:   final loss=0.286556, aspect loss=0.286556, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=86520
+Dev:   aspect f1=0.4395, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4395, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.17
+
+-------------------------------------Iter60-------------------------------------
+Train: final loss=0.714570, aspect loss=0.020909, opinion loss=0.000000, domain loss=0.693634, sentiment loss=0.000000, reg loss=0.000000, step=87962
+Dev:   final loss=0.305625, aspect loss=0.305625, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=87962
+Dev:   aspect f1=0.4356, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4356, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.17
+
+-------------------------------------Iter61-------------------------------------
+Train: final loss=0.713440, aspect loss=0.020574, opinion loss=0.000000, domain loss=0.692780, sentiment loss=0.000000, reg loss=0.000000, step=89404
+Dev:   final loss=0.247433, aspect loss=0.247433, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=89404
+Dev:   aspect f1=0.4451, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4451, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.16
+
+-------------------------------------Iter62-------------------------------------
+Train: final loss=0.713744, aspect loss=0.020699, opinion loss=0.000000, domain loss=0.692963, sentiment loss=0.000000, reg loss=0.000000, step=90846
+Dev:   final loss=0.279807, aspect loss=0.279807, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=90846
+Dev:   aspect f1=0.4357, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4357, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.16
+
+-------------------------------------Iter63-------------------------------------
+Train: final loss=0.714474, aspect loss=0.020550, opinion loss=0.000000, domain loss=0.693726, sentiment loss=0.000000, reg loss=0.000000, step=92288
+Dev:   final loss=0.259497, aspect loss=0.259497, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=92288
+Dev:   aspect f1=0.4486, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4486, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.15
+
+-------------------------------------Iter64-------------------------------------
+Train: final loss=0.713054, aspect loss=0.019914, opinion loss=0.000000, domain loss=0.693227, sentiment loss=0.000000, reg loss=0.000000, step=93730
+Dev:   final loss=0.284703, aspect loss=0.284703, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=93730
+Dev:   aspect f1=0.4317, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4317, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.15
+
+-------------------------------------Iter65-------------------------------------
+Train: final loss=0.712517, aspect loss=0.019105, opinion loss=0.000000, domain loss=0.693449, sentiment loss=0.000000, reg loss=0.000000, step=95172
+Dev:   final loss=0.298866, aspect loss=0.298866, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=95172
+Dev:   aspect f1=0.4334, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4334, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.14
+
+-------------------------------------Iter66-------------------------------------
+Train: final loss=0.714228, aspect loss=0.020395, opinion loss=0.000000, domain loss=0.693820, sentiment loss=0.000000, reg loss=0.000000, step=96614
+Dev:   final loss=0.275472, aspect loss=0.275472, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=96614
+Dev:   aspect f1=0.4383, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4383, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.14
+
+-------------------------------------Iter67-------------------------------------
+Train: final loss=0.713260, aspect loss=0.019680, opinion loss=0.000000, domain loss=0.693594, sentiment loss=0.000000, reg loss=0.000000, step=98056
+Dev:   final loss=0.250601, aspect loss=0.250601, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=98056
+Dev:   aspect f1=0.4424, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4424, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.13
+
+-------------------------------------Iter68-------------------------------------
+Train: final loss=0.712614, aspect loss=0.018866, opinion loss=0.000000, domain loss=0.693717, sentiment loss=0.000000, reg loss=0.000000, step=99498
+Dev:   final loss=0.247510, aspect loss=0.247510, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=99498
+Dev:   aspect f1=0.4476, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4476, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.13
+
+-------------------------------------Iter69-------------------------------------
+Train: final loss=0.712121, aspect loss=0.019127, opinion loss=0.000000, domain loss=0.692958, sentiment loss=0.000000, reg loss=0.000000, step=100940
+Dev:   final loss=0.240792, aspect loss=0.240792, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=100940
+Dev:   aspect f1=0.4433, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4433, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.13
+
+-------------------------------------Iter70-------------------------------------
+Train: final loss=0.712674, aspect loss=0.018983, opinion loss=0.000000, domain loss=0.693642, sentiment loss=0.000000, reg loss=0.000000, step=102382
+Dev:   final loss=0.277450, aspect loss=0.277450, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=102382
+Dev:   aspect f1=0.4308, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4308, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.12
+
+-------------------------------------Iter71-------------------------------------
+Train: final loss=0.712844, aspect loss=0.019382, opinion loss=0.000000, domain loss=0.693402, sentiment loss=0.000000, reg loss=0.000000, step=103824
+Dev:   final loss=0.269365, aspect loss=0.269365, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=103824
+Dev:   aspect f1=0.4335, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4335, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.12
+
+-------------------------------------Iter72-------------------------------------
+Train: final loss=0.713053, aspect loss=0.019628, opinion loss=0.000000, domain loss=0.693289, sentiment loss=0.000000, reg loss=0.000000, step=105266
+Dev:   final loss=0.295361, aspect loss=0.295361, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=105266
+Dev:   aspect f1=0.4363, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4363, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.12
+
+-------------------------------------Iter73-------------------------------------
+Train: final loss=0.712171, aspect loss=0.018507, opinion loss=0.000000, domain loss=0.693562, sentiment loss=0.000000, reg loss=0.000000, step=106708
+Dev:   final loss=0.277995, aspect loss=0.277995, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=106708
+Dev:   aspect f1=0.4458, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4458, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.11
+
+-------------------------------------Iter74-------------------------------------
+Train: final loss=0.711487, aspect loss=0.018390, opinion loss=0.000000, domain loss=0.693142, sentiment loss=0.000000, reg loss=0.000000, step=108150
+Dev:   final loss=0.323359, aspect loss=0.323359, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=108150
+Dev:   aspect f1=0.4306, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4306, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.11
+
+-------------------------------------Iter75-------------------------------------
+Train: final loss=0.711032, aspect loss=0.017430, opinion loss=0.000000, domain loss=0.693451, sentiment loss=0.000000, reg loss=0.000000, step=109592
+Dev:   final loss=0.302380, aspect loss=0.302380, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=109592
+Dev:   aspect f1=0.4358, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4358, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.11
+
+-------------------------------------Iter76-------------------------------------
+Train: final loss=0.712028, aspect loss=0.018811, opinion loss=0.000000, domain loss=0.693207, sentiment loss=0.000000, reg loss=0.000000, step=111034
+Dev:   final loss=0.290765, aspect loss=0.290765, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=111034
+Dev:   aspect f1=0.4385, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4385, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter77-------------------------------------
+Train: final loss=0.711421, aspect loss=0.018040, opinion loss=0.000000, domain loss=0.693254, sentiment loss=0.000000, reg loss=0.000000, step=112476
+Dev:   final loss=0.298944, aspect loss=0.298944, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=112476
+Dev:   aspect f1=0.4414, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4414, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter78-------------------------------------
+Train: final loss=0.710967, aspect loss=0.017408, opinion loss=0.000000, domain loss=0.693594, sentiment loss=0.000000, reg loss=0.000000, step=113918
+Dev:   final loss=0.308518, aspect loss=0.308518, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=113918
+Dev:   aspect f1=0.4477, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4477, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter79-------------------------------------
+Train: final loss=0.711162, aspect loss=0.017671, opinion loss=0.000000, domain loss=0.693487, sentiment loss=0.000000, reg loss=0.000000, step=115360
+Dev:   final loss=0.283691, aspect loss=0.283691, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=115360
+Dev:   aspect f1=0.4374, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4374, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter80-------------------------------------
+Train: final loss=0.710826, aspect loss=0.017268, opinion loss=0.000000, domain loss=0.693553, sentiment loss=0.000000, reg loss=0.000000, step=116802
+Dev:   final loss=0.285142, aspect loss=0.285142, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=116802
+Dev:   aspect f1=0.4475, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4475, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter81-------------------------------------
+Train: final loss=0.710330, aspect loss=0.016988, opinion loss=0.000000, domain loss=0.693444, sentiment loss=0.000000, reg loss=0.000000, step=118244
+Dev:   final loss=0.283821, aspect loss=0.283821, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=118244
+Dev:   aspect f1=0.4472, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4472, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter82-------------------------------------
+Train: final loss=0.711646, aspect loss=0.018063, opinion loss=0.000000, domain loss=0.693557, sentiment loss=0.000000, reg loss=0.000000, step=119686
+Dev:   final loss=0.265784, aspect loss=0.265784, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=119686
+Dev:   aspect f1=0.4479, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4479, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter83-------------------------------------
+Train: final loss=0.709705, aspect loss=0.016477, opinion loss=0.000000, domain loss=0.693222, sentiment loss=0.000000, reg loss=0.000000, step=121128
+Dev:   final loss=0.295821, aspect loss=0.295821, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=121128
+Dev:   aspect f1=0.4394, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4394, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter84-------------------------------------
+Train: final loss=0.710669, aspect loss=0.017230, opinion loss=0.000000, domain loss=0.693420, sentiment loss=0.000000, reg loss=0.000000, step=122570
+Dev:   final loss=0.271851, aspect loss=0.271851, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=122570
+Dev:   aspect f1=0.4518, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4518, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter85-------------------------------------
+Train: final loss=0.709510, aspect loss=0.016231, opinion loss=0.000000, domain loss=0.693293, sentiment loss=0.000000, reg loss=0.000000, step=124012
+Dev:   final loss=0.307436, aspect loss=0.307436, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=124012
+Dev:   aspect f1=0.4451, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4451, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter86-------------------------------------
+Train: final loss=0.710369, aspect loss=0.016733, opinion loss=0.000000, domain loss=0.693642, sentiment loss=0.000000, reg loss=0.000000, step=125454
+Dev:   final loss=0.293157, aspect loss=0.293157, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=125454
+Dev:   aspect f1=0.4371, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4371, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter87-------------------------------------
+Train: final loss=0.709697, aspect loss=0.016392, opinion loss=0.000000, domain loss=0.693291, sentiment loss=0.000000, reg loss=0.000000, step=126896
+Dev:   final loss=0.263098, aspect loss=0.263098, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=126896
+Dev:   aspect f1=0.4559, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4559, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter88-------------------------------------
+Train: final loss=0.709552, aspect loss=0.015932, opinion loss=0.000000, domain loss=0.693674, sentiment loss=0.000000, reg loss=0.000000, step=128338
+Dev:   final loss=0.320769, aspect loss=0.320769, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=128338
+Dev:   aspect f1=0.4390, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4390, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter89-------------------------------------
+Train: final loss=0.710432, aspect loss=0.016854, opinion loss=0.000000, domain loss=0.693593, sentiment loss=0.000000, reg loss=0.000000, step=129780
+Dev:   final loss=0.290244, aspect loss=0.290244, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=129780
+Dev:   aspect f1=0.4485, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4485, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter90-------------------------------------
+Train: final loss=0.708867, aspect loss=0.015752, opinion loss=0.000000, domain loss=0.693185, sentiment loss=0.000000, reg loss=0.000000, step=131222
+Dev:   final loss=0.319575, aspect loss=0.319575, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=131222
+Dev:   aspect f1=0.4431, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4431, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter91-------------------------------------
+Train: final loss=0.709243, aspect loss=0.016009, opinion loss=0.000000, domain loss=0.693255, sentiment loss=0.000000, reg loss=0.000000, step=132664
+Dev:   final loss=0.282378, aspect loss=0.282378, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=132664
+Dev:   aspect f1=0.4461, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4461, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter92-------------------------------------
+Train: final loss=0.708978, aspect loss=0.015733, opinion loss=0.000000, domain loss=0.693171, sentiment loss=0.000000, reg loss=0.000000, step=134106
+Dev:   final loss=0.303488, aspect loss=0.303488, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=134106
+Dev:   aspect f1=0.4410, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4410, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter93-------------------------------------
+Train: final loss=0.709304, aspect loss=0.016052, opinion loss=0.000000, domain loss=0.693306, sentiment loss=0.000000, reg loss=0.000000, step=135548
+Dev:   final loss=0.295632, aspect loss=0.295632, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=135548
+Dev:   aspect f1=0.4398, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4398, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter94-------------------------------------
+Train: final loss=0.708616, aspect loss=0.015056, opinion loss=0.000000, domain loss=0.693536, sentiment loss=0.000000, reg loss=0.000000, step=136990
+Dev:   final loss=0.309867, aspect loss=0.309867, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=136990
+Dev:   aspect f1=0.4309, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4309, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter95-------------------------------------
+Train: final loss=0.709131, aspect loss=0.015984, opinion loss=0.000000, domain loss=0.693180, sentiment loss=0.000000, reg loss=0.000000, step=138432
+Dev:   final loss=0.304550, aspect loss=0.304550, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=138432
+Dev:   aspect f1=0.4365, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4365, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter96-------------------------------------
+Train: final loss=0.708492, aspect loss=0.015010, opinion loss=0.000000, domain loss=0.693380, sentiment loss=0.000000, reg loss=0.000000, step=139874
+Dev:   final loss=0.291098, aspect loss=0.291098, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=139874
+Dev:   aspect f1=0.4555, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4555, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter97-------------------------------------
+Train: final loss=0.709062, aspect loss=0.015700, opinion loss=0.000000, domain loss=0.693322, sentiment loss=0.000000, reg loss=0.000000, step=141316
+Dev:   final loss=0.288407, aspect loss=0.288407, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=141316
+Dev:   aspect f1=0.4461, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4461, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter98-------------------------------------
+Train: final loss=0.708955, aspect loss=0.015541, opinion loss=0.000000, domain loss=0.693435, sentiment loss=0.000000, reg loss=0.000000, step=142758
+Dev:   final loss=0.286830, aspect loss=0.286830, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=142758
+Dev:   aspect f1=0.4475, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4475, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+-------------------------------------Iter99-------------------------------------
+Train: final loss=0.709159, aspect loss=0.015669, opinion loss=0.000000, domain loss=0.693517, sentiment loss=0.000000, reg loss=0.000000, step=144200
+Dev:   final loss=0.293727, aspect loss=0.293727, opinion loss=0.000000, sentiment loss=0.000000, reg loss=0.000000, step=144200
+Dev:   aspect f1=0.4416, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Test:  aspect f1=0.4416, opinion f1=0.0000, sentiment acc==0.0000, sentiment f1==0.0000, ABSA f1==0.0000,
+Current Max Metrics Index : 30 Current Min Loss Index : 25 Epoch Time: 0m 12s Tau : 0.10
+
+--------------------------------Mission Complete--------------------------------
+Dev Max Metrics Index: 30
+aspect f1=46.28, opinion f1=0.00, sentiment acc==0.00, sentiment f1==0.00, ABSA f1==0.00,
+Dev Min Loss Index: 25
+aspect f1=46.02, opinion f1=0.00, sentiment acc==0.00, sentiment f1==0.00, ABSA f1==0.00,
+Running Time: 19m 46s
